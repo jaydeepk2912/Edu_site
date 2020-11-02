@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOME</title>
+</head>
+<body>
+<form action="expression" method="POST">
+    {% csrf_token %}
+    1st Value:<input type="text" name="text1">
+    2nd Value:<input type="text" name="text2">
+    <input type="submit">
+</form>
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+<a href="{{link}}">This is a link to w3schools</a>
+<br>
+
+
+{% if user.is_authenticated %}
+
+<! -- app_name / function_name -->
+<a href="app4_logout/logout">Logout</a>
+
+{% else %}
+
+<a href="app2/signup">Signup</a>
+<a href="app3_login/login">Login</a>
+
+{% endif %}
+
+</body>
+</html>
